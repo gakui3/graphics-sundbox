@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Improved Terrain Generation — three.js</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: system-ui, sans-serif; }
+    #app { width: 100%; height: 100%; }
+    #ui {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: rgba(20, 24, 28, 0.75);
+      border-radius: 10px;
+      color: #e8e8e8;
+      z-index: 10;
+    }
+    #ui button {
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      background: #3a7bd5;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #ui button:hover { filter: brightness(1.15); }
+    #ui button.secondary { background: #4a5560; }
+    #counter { font-size: 13px; min-width: 130px; font-variant-numeric: tabular-nums; }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/",
+      "lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.20/+esm",
+      "simplex-noise": "https://cdn.jsdelivr.net/npm/simplex-noise@4.0.3/+esm"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="ui">
+    <button id="playBtn">▶ Play</button>
+    <button id="resetBtn" class="secondary">Reset</button>
+    <button id="regenBtn" class="secondary">Regenerate</button>
+    <span id="counter">0 droplets</span>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
