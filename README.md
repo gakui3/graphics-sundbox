@@ -8,3 +8,4 @@ three.js のシェーダー / グラフィックス実験場。リポジトリ�
 - parallax-occlusion-mapping: POM / SPOM
 - hydraulic-thermal-erosion: 格子ベースの水力侵食 + 熱侵食 (Jákó 2011)
 - improved-terrain-generation: パーティクルベースの水力侵食
+- dual-paraboloid-map: DP マップのベイカーと cubemap との比較
